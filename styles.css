@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body {
+  font-size: 18px;
+}
+body {
+  margin: 0;
+  font-family: Helvetica;
+}
+.post {
+}
+
+.post__header {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: #0099FF;
+  color: #FFF;
+  /* Location of the image */
+  background-image: url(images/zombie_kitten2.jpg);
+
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+  background-attachment: scroll;
+
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+}
+.post__headerNav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.post__headerNav > li {
+  display: inline-block;
+}
+.post__headerNav > li:after {
+  content: "-";
+}
+.post__headerNav > li:last-of-type:after {
+  content: none;
+}
+.post__headerNav > li > a {
+  color: inherit;
+  text-decoration: none;
+}
+.post__content {
+  width: 50%;
+  margin-left: 50%;
+  min-height: 200px;
+  padding: 40px;
+  padding-top: 0;
+  line-height: 27px;
+  color: #6D6D6D;
+}
+#ptop {
+  margin-top: 0;
+
+
+}
+
+
+@media screen and (max-width:599px) {
+  .post__header {
+    position: inherit;
+    top: 0;
+    bottom: 0;
+    width:  100%;
+    height: 450px;
+    background-color: #0099FF;
+    color: #FFF;
+    /* Location of the image */
+    background-image: url(images/zombie_kitten2.jpg);
+
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
+  }
+  .post__headerNav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post__headerNav > li {
+    display: inline-block;
+  }
+  .post__headerNav > li:after {
+    content: "-";
+  }
+  .post__headerNav > li:last-of-type:after {
+    content: none;
+  }
+  .post__headerNav > li > a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .post__content {
+    text-align: left;
+    width: 100%;
+    margin: 8px;
+
+    padding: 0px;
+    color: #6D6D6D;
+    display: inline-block;
+  }
+  }
+
+
+}
